@@ -1,11 +1,8 @@
 import { useMemo } from 'react';
 import Head from 'next/head';
-
 import { Button, Box } from '@chakra-ui/react';
 import { useInfiniteQuery } from 'react-query';
-
 import { api } from '../services/api';
-
 import { Header } from '../components/Header';
 import { CardList } from '../components/CardList';
 import { Loading } from '../components/Loading';
@@ -34,13 +31,11 @@ export default function Home(): JSX.Element {
           after: pageParam,
         },
       });
-
       return data;
     }
     const { data } = await api.get(`/api/images`);
     return data;
   }
-
   const {
     data,
     isLoading,
