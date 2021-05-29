@@ -41,17 +41,17 @@ export function Card({ data, viewImage }: CardProps): JSX.Element {
 
       <Box pt={5} pb={4} px={6}>
         {isLoading ? (
-          <>
+          <Box>
             <SkeletonText fontSize="2xl" mt={2} noOfLines={1} />
             <SkeletonText fontSize="md" mt={7} noOfLines={1} />
-          </>
+          </Box>
         ) : (
-          <>
+          <Box>
             <Heading fontSize="2xl">{data.title}</Heading>
             <Text mt={2.5} fontSize="md">
               {data.description}
             </Text>
-          </>
+          </Box>
         )}
       </Box>
     </Box>
